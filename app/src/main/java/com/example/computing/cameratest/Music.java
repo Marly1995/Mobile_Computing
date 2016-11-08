@@ -28,21 +28,25 @@ public class Music extends Activity {
 
     static Bitmap bitmap;
 
+    ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>();
     ArrayList<String> songs = new ArrayList<String>();
-
-//    ListView list = (ListView)findViewById(R.id.songList);
-//    ArrayAdapter<String> songArrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
 
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-//            }
-//        });
+        ListView list = (ListView)findViewById(R.id.songList);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                int imgPos = (int)id;
+                ImageView singleArt = (ImageView) findViewById(R.id.singleCoverArt);
+                singleArt.setImageBitmap(bitmaps.get(imgPos));
+            }
+        });
 
         new AsyncTaskParseXml().execute();
     }
@@ -99,19 +103,17 @@ public class Music extends Activity {
                             // when xml parser matches the ing tag, get the alt attribute value which contains the song name
                             if (name.equals("img")) {
                                 songs.add(chartPosition + ". " + xpp.getAttributeValue(null, "alt"));
-                                // increment the chart pos
-                                chartPosition++;
 
-                                // get the first img tag line number as it containts the current nu,mber 1
-                                if (xpp.getLineNumber() == 2) {
                                     // get the image cover art
                                     String imageurl = xpp.getAttributeValue(null, "src");
                                     // parse the coveer art url to proper type
                                     URL u = new URL(imageurl);
                                     // download image cover art from url and save as a bitmap
                                     InputStream is = u.openConnection().getInputStream();
-                                    bitmap = BitmapFactory.decodeStream(is);
-                                }
+                                    bitmaps.add(BitmapFactory.decodeStream(is));
+
+                                    chartPosition++;
+
                             } else if (name.equals("a")) {
                                 System.out.println("Artist: " + text.trim());
                             } else {
@@ -131,8 +133,6 @@ public class Music extends Activity {
         // below method will run when service htto request ius complete
         protected void onPostExecute(String strFromDoInBg){
             // bind the xml from service to the textview
-            ImageView singleArt = (ImageView) findViewById(R.id.singleCoverArt);
-            singleArt.setImageBitmap(bitmap);
 
             ListView list = (ListView)findViewById(R.id.songList);
             ArrayAdapter<String> songArrayAdapter = new ArrayAdapter<String>(Music.this, android.R.layout.simple_expandable_list_item_1, songs);
