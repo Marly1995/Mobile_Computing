@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Mobile_Computing.iml" filepath="$PROJECT_DIR$/Mobile_Computing.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cameraapp0.1_storageIncomplete.iml" filepath="$PROJECT_DIR$/cameraapp0.1_storageIncomplete.iml" />
     </modules>
   </component>
 </project>

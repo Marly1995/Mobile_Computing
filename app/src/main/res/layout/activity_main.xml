@@ -5,22 +5,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="Camera Example" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textview"
-        android:textSize="35dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="camera"
         android:id="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:layout_marginBottom="42dp"
-        android:onClick="dispatchTakePictureIntent" />
+        android:onClick="dispatchTakePictureIntent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -41,8 +33,8 @@
         android:text="movie"
         android:id="@+id/browserButton"
         android:onClick="browserIntent"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView" />
+        android:layout_alignTop="@+id/timer"
+        android:layout_toStartOf="@+id/timer" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -52,7 +44,7 @@
         android:id="@+id/calendarButton"
         android:onClick="eventIntent"
         android:layout_alignTop="@+id/timer"
-        android:layout_alignEnd="@+id/imageView" />
+        android:layout_toEndOf="@+id/timer" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -61,8 +53,9 @@
         android:text="CountDown"
         android:id="@+id/timer"
         android:onClick="startTimer"
-        android:layout_alignTop="@+id/browserButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/button"
+        android:layout_marginTop="42dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -70,9 +63,17 @@
         android:layout_height="wrap_content"
         android:text="Tweets"
         android:id="@+id/getTweets"
-        android:layout_below="@+id/timer"
-        android:layout_alignStart="@+id/timer"
-        android:layout_marginTop="27dp"
-        android:onClick="getTweetData" />
+        android:onClick="getTweetData"
+        android:layout_below="@+id/browserButton"
+        android:layout_toStartOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top40"
+        android:id="@+id/getTop40"
+        android:layout_alignBottom="@+id/getTweets"
+        android:layout_alignEnd="@+id/calendarButton"
+        android:onClick="getMusicData" />
 
 </RelativeLayout>

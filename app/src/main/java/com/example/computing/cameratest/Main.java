@@ -159,6 +159,13 @@ public class Main extends Activity {
         startActivity(intent);
     }
 
+    public void getMusicData(View view)
+    {
+        // create intent to start music thingy
+        Intent intent = new Intent(this, Music.class);
+        startActivity(intent);
+    }
+
 }
 
 
