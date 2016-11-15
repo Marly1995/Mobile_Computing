@@ -166,6 +166,21 @@ public class Main extends Activity {
         startActivity(intent);
     }
 
+    public void getUserData(View view){
+        Intent intent = new Intent(this, storage.class);
+        startActivity(intent);
+    }
+
+    public void getLocation(View view){
+        Intent intent = new Intent(this, fileStorage.class);
+        startActivity(intent);
+    }
+
+    public void locationHistory(View view){
+        Intent intent = new Intent(this, History.class);
+        startActivity(intent);
+    }
+
 }
 
 

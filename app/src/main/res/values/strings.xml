@@ -6,4 +6,7 @@
     <string name="title_activity_gallery">Gallery</string>
     <string name="title_activity_tweets">Tweets</string>
     <string name="title_activity_music">Music</string>
+    <string name="title_activity_storage">storage</string>
+    <string name="title_activity_file_storage">fileStorage</string>
+    <string name="title_activity_history">History</string>
 </resources>

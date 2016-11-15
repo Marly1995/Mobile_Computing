@@ -6,6 +6,7 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -51,6 +52,30 @@
         <activity
             android:name=".Music"
             android:label="@string/title_activity_music"
+            android:parentActivityName=".Main" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.computing.cameratest.Main" />
+        </activity>
+        <activity
+            android:name=".storage"
+            android:label="@string/title_activity_storage"
+            android:parentActivityName=".Main" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.computing.cameratest.Main" />
+        </activity>
+        <activity
+            android:name=".fileStorage"
+            android:label="@string/title_activity_file_storage"
+            android:parentActivityName=".Main" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.computing.cameratest.Main" />
+        </activity>
+        <activity
+            android:name=".History"
+            android:label="@string/title_activity_history"
             android:parentActivityName=".Main" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
