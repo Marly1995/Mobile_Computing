@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.computing.cameratest" >
+    package="com.example.computing.cameratest">
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -14,10 +14,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.AppCompat.Light">
         <activity
             android:name=".Main"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +29,7 @@
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.computing.cameratest"
             android:exported="false"
-            android:grantUriPermissions="true" >
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
@@ -39,12 +39,11 @@
 
         <activity
             android:name=".Gallery"
-            android:label="@string/title_activity_gallery" >
-        </activity>
+            android:label="@string/title_activity_gallery"></activity>
         <activity
             android:name=".Tweets"
             android:label="@string/title_activity_tweets"
-            android:parentActivityName=".Main" >
+            android:parentActivityName=".Main">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.computing.cameratest.Main" />
@@ -52,7 +51,7 @@
         <activity
             android:name=".Music"
             android:label="@string/title_activity_music"
-            android:parentActivityName=".Main" >
+            android:parentActivityName=".Main">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.computing.cameratest.Main" />
@@ -60,7 +59,7 @@
         <activity
             android:name=".storage"
             android:label="@string/title_activity_storage"
-            android:parentActivityName=".Main" >
+            android:parentActivityName=".Main">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.computing.cameratest.Main" />
@@ -68,7 +67,7 @@
         <activity
             android:name=".fileStorage"
             android:label="@string/title_activity_file_storage"
-            android:parentActivityName=".Main" >
+            android:parentActivityName=".Main">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.computing.cameratest.Main" />
@@ -76,7 +75,15 @@
         <activity
             android:name=".History"
             android:label="@string/title_activity_history"
-            android:parentActivityName=".Main" >
+            android:parentActivityName=".Main">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.computing.cameratest.Main" />
+        </activity>
+        <activity
+            android:name=".GoogleLogin"
+            android:label="@string/title_activity_google_login"
+            android:parentActivityName=".Main">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.computing.cameratest.Main" />

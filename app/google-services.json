@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "170604827282",
+    "project_id": "signin-4b684"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170604827282:android:379afef12d13dd1a",
+        "android_client_info": {
+          "package_name": "com.example.computing.cameratest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170604827282-rb4h0ao0f2ofn7ud9834run3kkj2ml9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.computing.cameratest",
+            "certificate_hash": "D2AE3F5E9C3A1EDE2BB91386BD7E24BAA7320942"
+          }
+        },
+        {
+          "client_id": "170604827282-03t7o2u7pbqjvft3qg2amam438mqj7kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPniiIZ4sTj6CrVTrhnhw4O-L-atcn3ZI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

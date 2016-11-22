@@ -181,6 +181,11 @@ public class Main extends Activity {
         startActivity(intent);
     }
 
+    public void googleSign(View view){
+        Intent intent = new Intent(this, GoogleLogin.class);
+        startActivity(intent);
+    }
+
 }
 
 
